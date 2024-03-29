@@ -29,3 +29,6 @@
 - Utilize web3.js library to interact with the Ethereum blockchain.
 - Implement a route to retrieve the balance of a specified Ethereum account.
 - Handle errors and edge cases gracefully.
+
+## Swagger UI - 
+Access the [API Documentation](http://localhost:8000/api-docs/#/) after running server
