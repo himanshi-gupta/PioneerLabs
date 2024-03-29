@@ -6,7 +6,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/data:
+ * /api/data?Category=category&limit=limit:
  *   get:
  *     description: Returns a list of entries
  *     responses:
@@ -25,11 +25,6 @@ router.route('/data').get(protect, getData);
  * @swagger
  * /signup:
  *   get:
- * parameters:
-        - in: header
-          name: X-Request-ID
-          type: string
-          required: true
  *     summary: Register users
  *     tags: [Students]
  *     responses:
