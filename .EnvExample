@@ -1,0 +1,4 @@
+PORT = 8000
+MODE = development
+MONGO_URI = 
+JWT_SECRET = 

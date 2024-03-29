@@ -1,0 +1,96 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Pioneer Labs APIs",
+    "description": "API for User Auth and retrieving Data"
+  },
+  "host": "http://localhost:8000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Authentication",
+      "description": "Endpoints related to user authentication"
+
+    },
+    {
+      "name": "Data Retrieval",
+      "description": "Endpoints for retrieving data"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {},
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/data": {
+      "get": {
+        "description": "Returns a list of entries",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "422":{
+            "description": "Invalid limit"
+          },
+          "500":{
+            "description": "Internal server error"
+          }
+        },
+        "parameters": {
+          "Category": "string",
+          "limit": "number"
+        }
+      }
+    },
+    "/api/user/signup": {
+      "post": {
+        "description": "Regsiter a user",
+        "responses": {
+          "201": {
+            "description": "Successful creaton of user"
+          },
+          "403":{
+            "description": "User already exists"
+          },
+          "400":{
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/user/login": {
+      "post": {
+        "description": "Authenticates a user",
+        "responses": {
+          "200": {
+            "description": "Successful login"
+          },
+          "400":{
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/user/logout": {
+      "post": {
+        "description": "Logout a user",
+        "responses": {
+          "200": {
+            "description": "Successful logout"
+          }
+        }
+      }
+    }
+  },
+  "apis": [
+    "server.js",
+    "./routes/*.js"
+  ]
+}
