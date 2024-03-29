@@ -7,17 +7,7 @@
   },
   "host": "http://localhost:8000",
   "basePath": "/",
-  "tags": [
-    {
-      "name": "Authentication",
-      "description": "Endpoints related to user authentication"
-
-    },
-    {
-      "name": "Data Retrieval",
-      "description": "Endpoints for retrieving data"
-    }
-  ],
+  "tags": [],
   "schemes": [
     "http"
   ],
